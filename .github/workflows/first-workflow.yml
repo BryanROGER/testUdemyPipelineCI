@@ -1,0 +1,46 @@
+name: first-workflow
+on: push
+jobs:
+  job-one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+      - name: install dependencies
+        uses: npm ci
+      - name: lint
+        run: npm lint
+      - name: test
+        run: npm test
+      - name: deploy
+        run: npm build
+
+  job-two:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+      - name: install dependencies
+        uses: npm ci
+      - name: lint
+        run: npm lint
+
+  job-three:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+      - name: install dependencies
+        uses: npm ci
+      - name: test
+        run: npm test
+
+  job-four:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v6
+      - name: install dependencies
+        uses: npm ci
+      - name: deploy
+        run: npm build
