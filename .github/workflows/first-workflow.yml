@@ -9,11 +9,11 @@ jobs:
       - name: install dependencies
         run: npm ci
       - name: lint
-        run: npm lint
+        run: npm run lint
       - name: test
         run: npm test
       - name: deploy
-        run: npm build
+        run: npm run build
 
   job-two:
     runs-on: ubuntu-latest
@@ -23,7 +23,7 @@ jobs:
       - name: install dependencies
         run: npm ci
       - name: lint
-        run: npm lint
+        run: npm run lint
 
   job-three:
     runs-on: ubuntu-latest
@@ -43,4 +43,4 @@ jobs:
       - name: install dependencies
         run: npm ci
       - name: deploy
-        run: npm build
+        run: npm run build
